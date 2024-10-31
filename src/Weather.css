@@ -1,0 +1,54 @@
+.weather-container { 
+    background-color: #f8e1c4; /* Light beige for a desert theme */
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace; /* Vintage font style */
+    display: flex;
+    flex-direction: column;
+    width: 75%; /* Ensure it takes full width */
+    max-width: 600px; /* Set a maximum width for the container */
+}
+
+.city-name {
+    text-align: center;
+    color: #5e4b3c; /* Dark brown */
+}
+
+.weather-details {
+    display: flex; /* Align left and right */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-details {
+    text-align: left; /* Align left text */
+    flex: 1; /* Allow this section to take up available space */
+}
+
+.right-details {
+    text-align: right; /* Align right text */
+    flex: 0 0 100px; /* Fix width for the temperature section */
+}
+
+.humidity, .precipitation, .air-quality {
+    font-size: 1em;
+    color: #5e4b3c; /* Dark brown for consistency */
+}
+
+.temperature {
+    font-size: 3em; /* Larger temperature display */
+    color: #b5651d; /* Desert brown */
+}
+
+.weather-description {
+    display: flex; /* Align emoji and description in a row */
+    align-items: center; /* Center align emoji with text */
+    font-size: 1.2em; /* Increased font size for description */
+    gap: 5px; /* Adds space between emoji and text */
+}
+
+.time {
+    font-size: 0.8em; /* Smaller font for static time */
+    color: #5e4b3c; /* Consistent color */
+}
