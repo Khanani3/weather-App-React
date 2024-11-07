@@ -5,6 +5,9 @@
   align-items: center;
   margin-bottom: 20px;
   gap: 8px; /* Space between input and button */
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap; /* Ensures elements wrap in smaller screens */
 }
 
 /* Styling the Input Field */
@@ -48,15 +51,51 @@
 }
 
 /* Responsive Styles */
+
+/* Small screens (less than 768px) */
 @media (max-width: 768px) {
   .search-container {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    margin-bottom: 15px;
   }
 
   .search-input,
   .search-button {
-    max-width: 90%;
+    max-width: 90%; /* Allow more flexibility on smaller screens */
+  }
+
+  .search-button {
+    width: 100%; /* Ensure button is full-width */
+    height: auto; /* Allow height to adapt */
+    padding: 12px 0; /* Adjust button's padding for better fit */
+  }
+}
+
+/* Very small screens (less than 480px) */
+@media (max-width: 480px) {
+  .search-input {
+    font-size: 0.9em; /* Slightly smaller font size */
+  }
+
+  .search-button {
+    font-size: 0.9em; /* Adjust button font size */
+    padding: 10px 0; /* Adjust padding for consistency */
+  }
+}
+
+/* Large screens (greater than 1024px) */
+@media (min-width: 1024px) {
+  .search-container {
+    gap: 15px; /* Space out input and button */
+  }
+
+  .search-input {
+    max-width: 300px; /* Increase max-width for larger screens */
+  }
+
+  .search-button {
+    padding: 12px 20px; /* Increase padding on large screens for better appearance */
   }
 }
