@@ -4,26 +4,27 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  gap: 8px; /* Space between input and button */
+  gap: 10px; /* Slightly smaller gap between input and button */
   width: 100%;
   box-sizing: border-box;
-  flex-wrap: wrap; /* Ensures elements wrap in smaller screens */
-  padding: 0 10px; /* Add some padding to avoid text clipping */
+  flex-wrap: wrap; /* Allows items to wrap if the container is too small */
+  padding: 0 10px; /* Prevents elements from touching the edges on small screens */
 }
 
 /* Styling the Input Field */
 .search-input {
-  padding: 12px;
-  font-size: 1em;
+  padding: 8px 12px;
+  font-size: 0.9em; /* Smaller font size */
   border: 1px solid #ccc;
   border-radius: 5px; /* Rounded corners */
-  max-width: 250px;
+  width: 100%;
+  max-width: 300px; /* Reduce the max-width of the input */
   box-sizing: border-box;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: border-color 0.3s ease;
-  width: 100%;
 }
 
+/* Focus effect for input */
 .search-input:focus {
   border-color: #5e4b3c;
   outline: none;
@@ -31,22 +32,23 @@
 
 /* Styling the Button to Match Input Height */
 .search-button {
-  font-size: 1em;
-  border: 1px solid #ccc; /* Match the input's border */
-  border-radius: 5px; /* Rounded corners */
+  font-size: 0.9em; /* Smaller font size */
+  border: 1px solid #ccc;
+  border-radius: 5px;
   background-color: #7b5a35;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  height: 100%; /* Match the height of the input */
-  padding: 12px 20px; /* Add horizontal padding for balance */
-  box-sizing: border-box; /* Match input's box-sizing */
+  height: 100%;
+  padding: 8px 12px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Match input shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Button Hover Effect */
 .search-button:hover {
   background-color: #5e4b3c;
 }
@@ -58,49 +60,54 @@
   .search-container {
     flex-direction: column; /* Stack input and button vertically */
     align-items: center;
-    gap: 12px; /* Add space between input and button */
-    margin-bottom: 15px;
-    padding: 0 20px; /* Add padding on the sides */
+    gap: 10px; /* Reduced gap between input and button */
   }
 
-  .search-input,
-  .search-button {
-    width: 100%; /* Ensure both input and button take full width */
-    max-width: 100%; /* No maximum width restriction */
-    font-size: 1.1em; /* Adjust font size for better readability */
+  .search-input {
+    max-width: 90%; /* Allow input to grow to the full width */
+    font-size: 1em; /* Slightly larger font size for readability */
+    padding: 8px 10px; /* Adjusted padding */
   }
 
   .search-button {
-    padding: 12px 0; /* Adjust padding for a consistent look */
-    height: auto; /* Allow the height to adapt */
+    max-width: 90%; /* Ensure button is the full width */
+    font-size: 1em; /* Button font size matches input */
+    padding: 8px 10px; /* Adjusted button padding */
+    height: auto; /* Let the button height adjust */
   }
 }
 
 /* Very small screens (less than 480px) */
 @media (max-width: 480px) {
+  .search-container {
+    padding: 0 5px; /* Remove extra padding */
+  }
+
   .search-input {
-    font-size: 1em; /* Adjust font size to fit smaller screens */
-    padding: 10px; /* Reduced padding to avoid overflow */
+    font-size: 0.85em; /* Smaller font size */
+    padding: 6px 8px; /* Smaller padding */
+    max-width: 100%; /* Allow the input to use all available space */
   }
 
   .search-button {
-    font-size: 1em; /* Adjust button font size for better fit */
-    padding: 10px 0; /* Keep padding consistent */
+    font-size: 0.85em; /* Button font size smaller */
+    padding: 6px 8px; /* Smaller padding */
+    width: 100%; /* Button full width */
   }
 }
 
 /* Larger screens (greater than 1024px) */
 @media (min-width: 1024px) {
   .search-container {
-    gap: 15px; /* Space out input and button */
-    padding: 0 40px; /* Add padding on large screens */
+    gap: 12px; /* Space out the input and button on large screens */
+    padding: 0 30px; /* Add padding on large screens */
   }
 
   .search-input {
-    max-width: 300px; /* Increase max-width for larger screens */
+    max-width: 400px; /* Limit input max width on large screens */
   }
 
   .search-button {
-    padding: 12px 20px; /* Increase padding for larger screens */
+    padding: 10px 15px; /* Increase padding for larger screens */
   }
 }
