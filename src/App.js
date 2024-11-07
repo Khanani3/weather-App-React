@@ -79,11 +79,11 @@ const App = () => {
       ) : (
         <p>Loading weather data...</p>
       )}
-      
+
       {/* Footer Section */}
       <footer className="footer">
         <p>
-          Open-source code by{' '}
+          Open-source coded by{' '}
           <a href="https://github.com/Khanani3" target="_blank" rel="noopener noreferrer">
             Khanani Hlungwani
           </a>{' '}

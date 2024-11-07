@@ -1,41 +1,36 @@
 .forecast-container {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  .forecast-grid {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .forecast-item {
-    background: #f4d9a9; /* Sandy desert background color */
-    padding: 15px;
-    border-radius: 10px;
-    width: 100px;
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Vintage shadow */
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    color: #3f2a13; /* Dark brown text for vintage look */
-    position: relative;
-    border: 1px solid #e4b867; /* Subtle border for a framed look */
-  }
-  
-  /* Emoji icon styling for a vintage desert effect */
-  .forecast-item .weather-icon {
-    font-size: 32px; /* Slightly larger for emphasis */
-    margin-bottom: 5px;
-    color: #8b5a2b; /* Muted, earthy color for desert feel */
-    filter: sepia(0.6) saturate(0.7) contrast(1.2) drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.4)); /* Vintage sepia and shadow */
-  }
-  
-  .forecast-item p {
-    margin: 5px 0;
-  }
-  
-  .weather-icon {
-    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3)); /* Consistent shadow */
-  }
-  
+  margin-top: 20px;
+  text-align: center;
+}
+
+.forecast-grid {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.forecast-item {
+  background: #f4d9a9; /* Sandy desert background color */
+  padding: 15px;
+  border-radius: 10px;
+  width: 100px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Vintage shadow */
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: #3f2a13; /* Dark brown text for vintage look */
+  position: relative;
+  border: 1px solid #e4b867; /* Subtle border for a framed look */
+}
+
+/* Emoji icon styling for a vintage desert effect */
+.forecast-item .weather-icon {
+  font-size: 32px; /* Slightly larger for emphasis */
+  margin-bottom: 5px;
+  color: #8b5a2b; /* Muted, earthy color for desert feel */
+  filter: sepia(0.8) saturate(0.6) contrast(1.2) drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.4)); /* Vintage sepia and shadow */
+}
+
+.forecast-item p {
+  margin: 5px 0;
+}

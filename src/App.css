@@ -12,8 +12,8 @@
 }
 
 .desert-theme {
-  /* Additional theme-specific styling */
-  /*background-image: url('path/to/vintage-desert-background.jpg'); /* Add a desert background image */
+  /* If you decide to add a background image */
+  /* background-image: url('path/to/vintage-desert-background.jpg'); */
   background-size: cover; /* Ensure the background covers the whole area */
   background-repeat: no-repeat; /* Prevent repetition of the background image */
 }
@@ -22,15 +22,23 @@
   color: #c0392b; /* Dark red color for error messages */
   font-weight: bold;
   font-style: italic; /* Italicize error messages for emphasis */
+  margin-top: 10px; /* Add margin for spacing */
 }
 
 input[type="text"] {
   padding: 10px;
   border-radius: 20px; /* Rounded corners */
   border: 1px solid #d0b493; /* Light brown border */
-  width: 200px;
+  width: 200px; /* Default width */
   margin-right: 5px;
   background-color: #eae1d3; /* Light sand color for input fields */
+  transition: all 0.3s ease; /* Smooth transition for focus effects */
+}
+
+input[type="text"]:focus {
+  outline: none; /* Remove default outline */
+  border-color: #a0522d; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(160, 82, 45, 0.5); /* Add shadow effect */
 }
 
 button {
@@ -41,6 +49,7 @@ button {
   color: white;
   cursor: pointer;
   font-weight: bold; /* Bold text for buttons */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effects */
 }
 
 button:hover {
@@ -54,7 +63,7 @@ button:hover {
 .forecast-grid {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allow wrapping of items */
 }
 
 .forecast-item {
@@ -62,9 +71,14 @@ button:hover {
   border: 1px solid #d0b493; /* Matching border color */
   border-radius: 10px;
   padding: 10px;
-  width: 100px;
+  width: 100px; /* Fixed width */
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.forecast-item:hover {
+  transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
 .forecast-item h3 {
@@ -76,8 +90,52 @@ button:hover {
   font-size: 0.9em; /* Slightly smaller font for descriptions */
 }
 
+/* Footer Styles */
 .footer {
-  margin-top: auto; /* Push the footer to the bottom */
-  text-align: center; /* Center the footer text */
-  color: #4b3c2e; /* Dark brown for consistency */
+  margin-top: auto;
+  text-align: center;
+  color: #4b3c2e; /* Dark brown text for vintage feel */
+  font-family: 'Georgia', serif; /* Vintage serif font */
+  font-size: 0.9em;
+  padding: 10px 0;
+}
+
+.footer a {
+  color: #a0522d; /* Vintage copper color */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #8b4513; /* Darker vintage shade on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  input[type="text"] {
+    width: 150px; /* Reduce width for smaller screens */
+  }
+
+  .forecast-item {
+    width: 80px; /* Adjust width of forecast items */
+  }
+}
+
+@media (max-width: 576px) {
+  .app-container {
+    font-size: 0.9em; /* Adjust font size for smaller devices */
+  }
+
+  input[type="text"] {
+    width: 100px; /* Further reduce width for extra small screens */
+  }
+
+  .forecast-item {
+    width: 70px; /* Adjust width for smaller forecast items */
+  }
 }
