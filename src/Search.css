@@ -18,7 +18,7 @@
   border: 1px solid #ccc;
   border-radius: 5px; /* Rounded corners */
   width: 100%;
-  max-width: 300px; /* Reduce the max-width of the input */
+  max-width: 280px; /* Limit the max width for small screens */
   box-sizing: border-box;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: border-color 0.3s ease;
@@ -93,6 +93,28 @@
     font-size: 0.85em; /* Button font size smaller */
     padding: 6px 8px; /* Smaller padding */
     width: 100%; /* Button full width */
+  }
+}
+
+/* Extremely small screens (less than 375px - very small screens like older phones) */
+@media (max-width: 375px) {
+  .search-container {
+    padding: 0 5px; /* Remove extra padding */
+    gap: 8px; /* Reduce gap between input and button */
+    flex-direction: column; /* Stack vertically */
+    width: 100%; /* Make sure the container uses full width */
+  }
+
+  .search-input {
+    font-size: 0.75em; /* Reduce font size further */
+    padding: 6px 8px; /* Smaller padding */
+    width: 100%; /* Ensure input takes full width */
+  }
+
+  .search-button {
+    font-size: 0.75em; /* Button font size smaller */
+    padding: 6px 8px; /* Smaller padding */
+    width: 100%; /* Ensure button takes full width */
   }
 }
 
